@@ -12,7 +12,16 @@
 2. Install dependencies
     - Write in terminal:
         npm install
-        
+
+3. Execute
+    - Write in terminal
+        npm run dev
+    - Ctrl + Click on link
+
+4. Delete test code
+    - Divs in app.jsx
+    - Clean App.css
+    - Clear index.css
 
 # React + Vite
 
