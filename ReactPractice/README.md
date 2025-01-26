@@ -1,14 +1,18 @@
 # How to start a vite project
 
-1. Write in terminal:
+1. Create project 
+    - Write in terminal:
 
-    npm create vite@latest
+        npm create vite@latest
 
-2. Choose a project name
+    - Choose a project name
+    - Select React for framework and JavaScript for variant
+    - Open Project folder
 
-3. Select React for framework and JavaScript for variant
-
-4. Open Project folder
+2. Install dependencies
+    - Write in terminal:
+        npm install
+        
 
 # React + Vite
 
