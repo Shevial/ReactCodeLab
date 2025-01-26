@@ -1,3 +1,15 @@
+# How to start a vite project
+
+1. Write in terminal:
+
+    npm create vite@latest
+
+2. Choose a project name
+
+3. Select React for framework and JavaScript for variant
+
+4. Open Project folder
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
