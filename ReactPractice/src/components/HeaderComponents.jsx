@@ -1,23 +1,24 @@
-import "./HeaderComponent.css";
+import "./HeaderComponents.css";
 
 
-function HeaderComponents() {
+function HeaderComponents(props) {
+  const {greetings, links } = props;
   return (
     <header className="header">
-      <h1 className="title">Header</h1>
+        <h1 className="title">{greetings}</h1>
       <nav>
         <ul className="header-list">
             <li>
-                <a className= "links" href="/">Home</a>
+                <a className= "links" href="/">{links.home}</a>
             </li>
             <li>
-                <a className= "links" href="/">Blog</a>
+                <a className= "links" href="/">{links.blog}</a>
             </li>
             <li>
-                <a className= "links" href="/">News</a>
+                <a className= "links" href="/">{links.news}</a>
             </li>
             <li>
-                <a className= "links" href="/">Contact Us</a>
+                <a className= "links" href="/">{links.contactus}</a>
             </li>
         </ul>
       </nav>
