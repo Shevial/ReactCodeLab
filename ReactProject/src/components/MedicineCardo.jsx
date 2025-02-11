@@ -3,7 +3,7 @@ import { useState } from "react"
 
     function MedicineCard() {
 
-      const[medicine, setMedicine] = useState({})
+      const[medicines, setMedicines] = useState([])
         useEffect(() => {
             fetch("http://localhost:8080/api/medicines/view")
             .then((response) => response.json())
@@ -11,14 +11,18 @@ import { useState } from "react"
         }, [])
     
   return (
-    medicine.id ? (
-    <li className="medicine-card">
-      <h2 className="medicine-name">{medicine.name}</h2>
-      <h3 className="text"> Minimum dosage: {medicine.details}</h3>
-    </li>
-  ) : (
-    <p className="loading">Loading...</p>
-  )
+    <ul className="medicine-list">
+      {medicines.map(medicine => (
+        <li key={medicine.id} className="medicine-card">
+          <h2 className="medicine-name">{medicine.name}</h2>
+          <div className="dosage-info">
+            <p>Dosis mínima: {medicine.dosage?.minimum_factor || 'N/A'}</p>
+            <p>Frecuencia: {medicine.dosage?.dosage_frequency || 'N/A'}</p>
+          </div>
+          <p className="details">{medicine.details}</p>
+        </li>
+      ))}
+    </ul>
 )
 }
 export default MedicineCard

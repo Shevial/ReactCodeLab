@@ -1,4 +1,4 @@
-import MedicineCard from "./MedicineCard"
+import MedicineCardo from "./MedicineCardo"
 
 function MedicineList() {
   return (
