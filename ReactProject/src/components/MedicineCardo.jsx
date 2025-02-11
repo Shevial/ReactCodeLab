@@ -1,14 +1,15 @@
 import { useEffect } from "react"
 import { useState } from "react"
 
-    function MedicineCard() {
+function MedicineCard() {
 
-      const[medicines, setMedicines] = useState([])
-        useEffect(() => {
-            fetch("http://localhost:8080/api/medicines/view")
-            .then((response) => response.json())
-            .then((data) => setMedicine(data))
-        }, [])
+    const [medicines, setMedicines] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:8080/api/medicines/view")
+        .then((response) => response.json())
+        .then((data) => setMedicines(data))
+    }, [])
     
   return (
     <ul className="medicine-list">
