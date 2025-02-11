@@ -3,7 +3,7 @@ import MedicineCard from "./MedicineCard"
 function MedicineList() {
   return (
     <ul className="medicine-list">
-      <MedicineCard></MedicineCard>
+      <MedicineCardo></MedicineCardo>
     </ul>
   )
 }

@@ -2,7 +2,7 @@ import { useEffect } from "react"
 
     function MedicineCard() {
         useEffect(() => {
-            fetch("http://localhost:8080/medicines/view/2")
+            fetch("http://localhost:8080/api/medicines/view")
             .then((response) => response.json())
             .then((data) => console.log(data))
             .catch(error => console.error("Error:", error));
@@ -10,7 +10,7 @@ import { useEffect } from "react"
     
   return (
     <li className="Medicine-card">
-
+      <h2 className="medicine-name"></h2>
     </li>
   )
 }
