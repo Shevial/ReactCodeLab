@@ -1,4 +1,5 @@
 import './MedicineCard.css'
+import { useState } from 'react'
 
 function MedicineCard({ medicine }) {
   if (!medicine) return null // Bloquea renderizado si no hay datos
