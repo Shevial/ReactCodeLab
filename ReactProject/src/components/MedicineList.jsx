@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'; 
 import MedicineCard from './MedicineCard';
 
-function MedicineList() {
+function MedicineList(props) {
   const [medicines, setMedicines] = useState([]);
 
   // Cargar medicamentos al inicio
@@ -33,6 +33,7 @@ function MedicineList() {
           key={medicine.id} 
           medicine={medicine}
           onDelete={handleDelete} 
+          selectMedicine={props.selectMedicine}
         />
       ))}
     </ul>
