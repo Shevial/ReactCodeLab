@@ -3,7 +3,7 @@ import MedicineCard from './MedicineCard';
 
 
 function MedicineList(props) {
-  const { medicines, selectMedicine, onDelete } = props;
+  const { medicines, selectMedicine, onDelete, onEdit, onCalc } = props;
 
   return (
     <ul className="medicine-list">
@@ -13,6 +13,8 @@ function MedicineList(props) {
           medicine={medicine}
           onDelete={onDelete} 
           selectMedicine={selectMedicine}
+          onEdit={onEdit}
+          onCalc={onCalc}
         />
       ))}
     </ul>

@@ -1,6 +1,6 @@
 import './MedicineDetails.css';
 function MedicineDetails(props) {
-    const { medicine, onDelete } = props;
+    const { medicine, onDelete, onEdit, onCalc} = props;
   
     return (
       <section className="selected-medicine">
@@ -10,6 +10,7 @@ function MedicineDetails(props) {
               <h2>{medicine.name}</h2>
               <button className="delete-button" onClick={() => onDelete(medicine.id)}>Borrar</button>
               <button className="edit-button" onClick={() => onEdit(medicine.id)}>Editar</button>
+              <button className="calculate-button" onClick={() => onCalc(medicine.id)}>Calcular</button>
 
             </div>
             <p>{medicine.details}</p>
