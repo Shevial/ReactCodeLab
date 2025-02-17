@@ -2,7 +2,7 @@ import './MedicineCard.css'
 import { useState } from 'react'
 
 function MedicineCard(props) {
-  const {medicine, selectMedicine}= props;
+  const {medicine, selectMedicine, onDelete}= props;
   if (!medicine) return null // Bloquea renderizado si no hay datos
   
   return (
