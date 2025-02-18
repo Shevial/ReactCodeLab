@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import'./MedicineForm.css';
 
 function MedicineForm({ medicine, onSubmit, onCancel }) {
   const [formData, setFormData] = useState({
@@ -84,7 +85,7 @@ function MedicineForm({ medicine, onSubmit, onCancel }) {
         <label>
           Frecuencia:
           <input
-            type="text"
+            type="number"
             name="dosage.dosage_frequency"
             value={formData.dosage.dosage_frequency}
             onChange={handleChange}
@@ -93,7 +94,7 @@ function MedicineForm({ medicine, onSubmit, onCancel }) {
           <label>
           Maximum daily dose:
           <input
-            type="text"
+            type="number"
             name="dosage.max_daily_dose"
             value={formData.dosage.max_daily_dose}
             onChange={handleChange}
@@ -102,7 +103,7 @@ function MedicineForm({ medicine, onSubmit, onCancel }) {
           <label>
           Average Weight:
           <input
-            type="text"
+            type="number"
             name="dosage.avg_weight"
             value={formData.dosage.avg_weight}
             onChange={handleChange}
