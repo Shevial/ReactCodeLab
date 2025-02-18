@@ -114,7 +114,7 @@ function App() {
           className="create-button"
           onClick={() => setIsCreating(true)}
         >
-          Insertar Nuevo Medicamento
+          Insert new medication
         </button>
       </div>
 
@@ -177,7 +177,7 @@ function App() {
       )}
 
       {/* Lista de medicamentos */}
-      <h2>Lista de Medicamentos</h2>
+
       <MedicineList
         medicines={medicines}
         selectMedicine={(med) => {

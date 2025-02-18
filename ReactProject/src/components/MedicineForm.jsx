@@ -85,7 +85,7 @@ function MedicineForm({ medicine, onSubmit, onCancel }) {
         <label>
           Frecuencia:
           <input
-            type="number"
+            type="text"
             name="dosage.dosage_frequency"
             value={formData.dosage.dosage_frequency}
             onChange={handleChange}
