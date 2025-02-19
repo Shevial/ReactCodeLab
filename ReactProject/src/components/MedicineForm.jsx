@@ -112,8 +112,8 @@ function MedicineForm({ medicine, onSubmit, onCancel }) {
       </div>
 
       <div className="form-buttons">
-        <button type="submit">Save</button>
-        <button type="button" onClick={onCancel}>Cancel</button>
+        <button type="submit" className="btn-primary">Save</button>
+        <button type="button" className="btn-secondary" onClick={onCancel}>Cancel</button>
       </div>
     </form>
   );

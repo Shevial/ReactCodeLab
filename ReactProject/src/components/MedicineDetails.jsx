@@ -10,9 +10,9 @@ function MedicineDetails(props) {
           <div className="card-header">
             <h2>{medicine.name}</h2>
             <div className="button-container">
-              <button className="edit-button" onClick={onEdit}>Edit</button>
-              <button className="calculate-button" onClick={onCalculate}>Calculate</button>
-              <button className="delete-button" onClick={() => onDelete(medicine.id)}>Delete</button>
+              <button className="btn-secondary" onClick={onEdit}>Edit</button>
+              <button className="btn-primary" onClick={onCalculate}>Calculate</button>
+              <button className="btn-danger" onClick={() => onDelete(medicine.id)}>Delete</button>
             </div>
           </div>
           <p className="details">{medicine.details}</p>

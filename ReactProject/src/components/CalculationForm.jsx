@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import './CalculationForm.css';
 function CalculationForm({ onSubmit, onCancel }) {
   const [formData, setFormData] = useState({
     age: '',
@@ -47,8 +47,8 @@ function CalculationForm({ onSubmit, onCancel }) {
       </label>
 
       <div className="form-buttons">
-        <button type="submit">Calculate</button>
-        <button type="button" onClick={onCancel}>Cancel</button>
+        <button type="submit"  className="btn-primary">Calculate</button>
+        <button type="button"  className="btn-secondary" onClick={onCancel}>Cancel</button>
       </div>
     </form>
   );

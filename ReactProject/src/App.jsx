@@ -167,10 +167,12 @@ function App() {
               <p>Patient age: {calculationResult.patient.age}</p>
               <p>Patient weight: {calculationResult.patient.weight} kg</p>
               <div dangerouslySetInnerHTML={{ __html: calculationResult.dosageResult }} />
-              <button onClick={() => { 
+              <div className="form-buttons">
+              <button className="btn-secondary" onClick={() => { 
                 setCalculationResult(null);
                 setMedicineForCalculation(null);
               }}>Close</button>
+              </div>
             </div>
           </div>
         </div>
