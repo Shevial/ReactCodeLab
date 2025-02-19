@@ -7,8 +7,8 @@ function MedicineCard(props) {
   
   return (
     <li className="medicine-card" onClick={() => selectMedicine(medicine)}>
-      <h2 className="medicine-name">{medicine.name || 'Medicamento desconocido'}</h2>
-      <p className="details">{medicine.details || 'Sin detalles adicionales'}</p>
+      <h2 className="medicine-name">{medicine.name || 'Unknown medication'}</h2>
+      <p className="details">{medicine.details || 'No additional details'}</p>
     </li>
   )
 }

@@ -3,15 +3,15 @@ import { useState, useEffect } from 'react';
 import MedicineDetails from './components/MedicineDetails';
 import MedicineList from './components/MedicineList';
 import MedicineForm from './components/MedicineForm';
-import CalculationForm from './components/CalculationForm'; // Nuevo componente
+import CalculationForm from './components/CalculationForm'; 
 
 function App() {
   const [selectedMedicine, setSelectedMedicine] = useState(null);
   const [medicines, setMedicines] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
-  const [isCreating, setIsCreating] = useState(false); // Nuevo estado para creación
-  const [isCalculating, setIsCalculating] = useState(false); // Estado para cálculo
-  const [calculationResult, setCalculationResult] = useState(null); // Resultado del cálculo
+  const [isCreating, setIsCreating] = useState(false); 
+  const [isCalculating, setIsCalculating] = useState(false); 
+  const [calculationResult, setCalculationResult] = useState(null);
   const [medicineForCalculation, setMedicineForCalculation] = useState(null);
 
 
@@ -122,7 +122,7 @@ function App() {
       {isCreating && (
         <div className="modal-backdrop" onClick={() => setIsCreating(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h2>Nuevo Medicamento</h2>
+            <h2>New medication</h2>
             <MedicineForm
               onSubmit={handleCreateMedicine}
               onCancel={() => setIsCreating(false)}
@@ -135,7 +135,7 @@ function App() {
       {isEditing && (
         <div className="modal-backdrop" onClick={() => setIsEditing(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h2>Editar Medicamento</h2>
+            <h2>Edit medication</h2>
             <MedicineForm
               medicine={selectedMedicine}
               onSubmit={handleUpdateMedicine}
@@ -161,16 +161,16 @@ function App() {
       {calculationResult && (
         <div className="modal-backdrop" onClick={() => setCalculationResult(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h2>Resultado del Cálculo</h2>
+            <h2>Result</h2>
             <div className="calculation-result">
               <h3>{calculationResult.medicine.name}</h3>
-              <p>Edad del paciente: {calculationResult.patient.age}</p>
-              <p>Peso del paciente: {calculationResult.patient.weight} kg</p>
+              <p>Patient age: {calculationResult.patient.age}</p>
+              <p>Patient weight: {calculationResult.patient.weight} kg</p>
               <div dangerouslySetInnerHTML={{ __html: calculationResult.dosageResult }} />
               <button onClick={() => { 
                 setCalculationResult(null);
                 setMedicineForCalculation(null);
-              }}>Cerrar</button>
+              }}>Close</button>
             </div>
           </div>
         </div>

@@ -10,20 +10,18 @@ function MedicineDetails(props) {
           <div className="card-header">
             <h2>{medicine.name}</h2>
             <div className="button-container">
-              <button className="edit-button" onClick={onEdit}>Editar</button>
-              <button className="calculate-button" onClick={onCalculate}>Calcular</button>
-              <button className="delete-button" onClick={() => onDelete(medicine.id)}>
-                Borrar
-              </button>
+              <button className="edit-button" onClick={onEdit}>Edit</button>
+              <button className="calculate-button" onClick={onCalculate}>Calculate</button>
+              <button className="delete-button" onClick={() => onDelete(medicine.id)}>Delete</button>
             </div>
           </div>
           <p className="details">{medicine.details}</p>
           <div className="dosage-info">
-            <p>Dosis mínima: {medicine.dosage?.minimum_factor ?? 'N/A'}</p>
-            <p>Dosis máxima: {medicine.dosage?.maximum_factor ?? 'N/A'}</p>
-            <p>Frecuencia: {medicine.dosage?.dosage_frequency ?? 'N/A'}</p>
-            <p>Máximo diario: {medicine.dosage?.max_daily_dose ?? 'N/A'}</p>
-            <p>Peso promedio: {medicine.dosage?.avg_weight ?? 'N/A'}</p>
+            <p>Minimum dose: {medicine.dosage?.minimum_factor ?? 'N/A'} mg</p>
+            <p>Maximum dose: {medicine.dosage?.maximum_factor ?? 'N/A'} mg</p>
+            <p>Frequency: {medicine.dosage?.dosage_frequency ?? 'N/A'}</p>
+            <p>Maximum daily dose: {medicine.dosage?.max_daily_dose ?? 'N/A'} mg</p>
+            <p>Average weight: {medicine.dosage?.avg_weight ?? 'N/A'} kg</p>
           </div>
         </div>
       </div>

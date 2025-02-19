@@ -20,10 +20,10 @@ function CalculationForm({ onSubmit, onCancel }) {
 
   return (
     <form onSubmit={handleSubmit} className="medicine-form">
-      <h3>Datos del Paciente</h3>
+      <h3>Patient data</h3>
       
       <label>
-        Edad (años):
+        Age (years):
         <input
           type="number"
           name="age"
@@ -35,7 +35,7 @@ function CalculationForm({ onSubmit, onCancel }) {
       </label>
 
       <label>
-        Peso (kg):
+        Weight (kg):
         <input
           type="number"
           name="weight"
@@ -47,8 +47,8 @@ function CalculationForm({ onSubmit, onCancel }) {
       </label>
 
       <div className="form-buttons">
-        <button type="submit">Calcular</button>
-        <button type="button" onClick={onCancel}>Cancelar</button>
+        <button type="submit">Calculate</button>
+        <button type="button" onClick={onCancel}>Cancel</button>
       </div>
     </form>
   );

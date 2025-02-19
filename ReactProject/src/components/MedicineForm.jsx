@@ -44,7 +44,7 @@ function MedicineForm({ medicine, onSubmit, onCancel }) {
   return (
     <form onSubmit={handleSubmit} className="medicine-form">
       <label>
-        Nombre:
+        Name:
         <input
           type="text"
           name="name"
@@ -54,7 +54,7 @@ function MedicineForm({ medicine, onSubmit, onCancel }) {
       </label>
 
       <label>
-        Detalles:
+        Details:
         <textarea
           name="details"
           value={formData.details}
@@ -63,9 +63,9 @@ function MedicineForm({ medicine, onSubmit, onCancel }) {
       </label>
 
       <div className="dosage-fields">
-        <h3>Dosis</h3>
+        <h3>Dose</h3>
         <label>
-          Mínima:
+          Minimum dose: (in mg)
           <input
             type="number"
             name="dosage.minimum_factor"
@@ -74,7 +74,7 @@ function MedicineForm({ medicine, onSubmit, onCancel }) {
           />
         </label>
         <label>
-          Maxima dosis:
+          Maximum dose: (in mg)
           <input
             type="number"
             name="dosage.maximum_factor"
@@ -83,7 +83,7 @@ function MedicineForm({ medicine, onSubmit, onCancel }) {
           />
         </label>
         <label>
-          Frecuencia:
+          Frequency:
           <input
             type="text"
             name="dosage.dosage_frequency"
@@ -112,8 +112,8 @@ function MedicineForm({ medicine, onSubmit, onCancel }) {
       </div>
 
       <div className="form-buttons">
-        <button type="submit">Guardar</button>
-        <button type="button" onClick={onCancel}>Cancelar</button>
+        <button type="submit">Save</button>
+        <button type="button" onClick={onCancel}>Cancel</button>
       </div>
     </form>
   );
