@@ -3,7 +3,10 @@ import { useState, useEffect } from 'react';
 import MedicineDetails from './components/MedicineDetails';
 import MedicineList from './components/MedicineList';
 import MedicineForm from './components/MedicineForm';
-import CalculationForm from './components/CalculationForm'; 
+import CalculationForm from './components/CalculationForm';
+import Footer from './components/Footer'; 
+import Banner from './components/Banner'; 
+
 
 function App() {
   const [selectedMedicine, setSelectedMedicine] = useState(null);
@@ -109,6 +112,11 @@ function App() {
 
   return (
     <>
+    <div className="app-container">
+
+     <Banner />
+     <main className="main-content">
+
       <div className="header-controls">
         <button 
           className="create-button"
@@ -207,6 +215,9 @@ function App() {
           </div>
         </div>
       )}
+        </main>
+      <Footer/>
+      </div>
     </>
   );
 }
